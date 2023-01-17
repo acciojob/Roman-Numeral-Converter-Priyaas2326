@@ -10,7 +10,16 @@ function convertToRoman(num) {
     };
 
   //your code here
+var romanized = "";
 
+  for (var index = 0; index < obj.length; index++) {
+    while (obj[index] <= num) {
+      romanized += obj[index];
+      num -= obj[index];
+    }
+  }
+  return romanized.toUpperCase();
+}
 }
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
 
